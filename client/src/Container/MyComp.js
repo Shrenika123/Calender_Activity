@@ -9,7 +9,7 @@ class MyComp extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/members').then((res) => this.setState({ results: res.data }))
+        axios.get('https://calendar-activitychecker.herokuapp.com/members').then((res) => this.setState({ results: res.data }))
     }
 
     render() {
