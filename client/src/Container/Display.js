@@ -12,7 +12,7 @@ class Display extends Component{
     }
 
     async componentDidMount(){
-         await axios.get('https://calendar-activitychecker.herokuapp.com/members/'+this.props.id).then((res)=> this.setState({results:res.data.activity_periods,tz:res.data.tz}))
+         await axios.get('http://localhost:8000/members/'+this.props.id).then((res)=> this.setState({results:res.data.activity_periods,tz:res.data.tz}))
         this.showDate()
     }
 

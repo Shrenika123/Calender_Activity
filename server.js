@@ -1,6 +1,6 @@
 const jsonServer = require('json-server');
 const express=require('express')
-var app=express()
+const app=express()
 const server = jsonServer.create();
 const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults();
@@ -14,4 +14,4 @@ if(process.env.NODE_ENV==='production')
 server.use(middlewares);
 server.use(router);
 
-server.listen(port);
+server.listen(port,() => console.log(`Listening on port ${port}`));
